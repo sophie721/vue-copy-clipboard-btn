@@ -53,5 +53,9 @@ export default {
 .show-copy-text::after {
   content: attr(data-copy-text);
   margin-left: .5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 </style>
