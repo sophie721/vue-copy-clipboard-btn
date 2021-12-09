@@ -51,7 +51,7 @@ export default {
   fill: black;
 }
 
-.copy-clipboard.show-copy-text::after {
+.copy-clipboard-wrapper.show-copy-text::after {
   content: attr(data-copy-text);
   margin-left: .5rem;
 }

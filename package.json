@@ -1,6 +1,6 @@
 {
   "name": "vue-copy-clipboard-btn",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "main": "dist/copy-clipboard-btn.umd.js",
   "module": "dist/copy-clipboard-btn.umd.js",
   "unpkg": "dist/copy-clipboard-btn.umd.js",
