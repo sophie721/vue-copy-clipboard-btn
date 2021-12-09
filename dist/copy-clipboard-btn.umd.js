@@ -34,9 +34,8 @@
   };
 
   const _withScopeId = n => (vue.pushScopeId("data-v-6457b266"),n=n(),vue.popScopeId(),n);
-  const _hoisted_1 = { class: "copy-clipboard-wrapper" };
-  const _hoisted_2 = ["data-clipboard-text"];
-  const _hoisted_3 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/vue.createElementVNode("svg", {
+  const _hoisted_1 = ["data-clipboard-text"];
+  const _hoisted_2 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/vue.createElementVNode("svg", {
     height: "15",
     viewBox: "0 0 24 24",
     width: "15",
@@ -44,19 +43,17 @@
   }, [
     /*#__PURE__*/vue.createElementVNode("path", { d: "M18 6v-6h-18v18h6v6h18v-18h-6zm-12 10h-4v-14h14v4h-10v10zm16 6h-14v-14h14v14z" })
   ], -1 /* HOISTED */));
-  const _hoisted_4 = [
-    _hoisted_3
+  const _hoisted_3 = [
+    _hoisted_2
   ];
 
   function render(_ctx, _cache, $props, $setup, $data, $options) {
-    return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1, [
-      vue.createElementVNode("button", {
-        "data-clipboard-text": $props.text,
-        class: "btn copy-clipboard",
-        style: vue.normalizeStyle(_ctx.styleOptions),
-        onClick: _cache[0] || (_cache[0] = $event => ($options.showCopyAlert($event)))
-      }, _hoisted_4, 12 /* STYLE, PROPS */, _hoisted_2)
-    ]))
+    return (vue.openBlock(), vue.createElementBlock("button", {
+      "data-clipboard-text": $props.text,
+      class: "btn copy-clipboard",
+      style: vue.normalizeStyle(_ctx.styleOptions),
+      onClick: _cache[0] || (_cache[0] = $event => ($options.showCopyAlert($event)))
+    }, _hoisted_3, 12 /* STYLE, PROPS */, _hoisted_1))
   }
 
   function styleInject(css, ref) {

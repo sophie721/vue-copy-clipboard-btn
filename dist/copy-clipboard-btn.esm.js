@@ -1,4 +1,4 @@
-import { openBlock, createElementBlock, createElementVNode, normalizeStyle, pushScopeId, popScopeId } from 'vue';
+import { openBlock, createElementBlock, normalizeStyle, pushScopeId, popScopeId, createElementVNode } from 'vue';
 
 var script = {
   data: () => ({
@@ -30,9 +30,8 @@ var script = {
 };
 
 const _withScopeId = n => (pushScopeId("data-v-6457b266"),n=n(),popScopeId(),n);
-const _hoisted_1 = { class: "copy-clipboard-wrapper" };
-const _hoisted_2 = ["data-clipboard-text"];
-const _hoisted_3 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/createElementVNode("svg", {
+const _hoisted_1 = ["data-clipboard-text"];
+const _hoisted_2 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/createElementVNode("svg", {
   height: "15",
   viewBox: "0 0 24 24",
   width: "15",
@@ -40,19 +39,17 @@ const _hoisted_3 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/createElementVN
 }, [
   /*#__PURE__*/createElementVNode("path", { d: "M18 6v-6h-18v18h6v6h18v-18h-6zm-12 10h-4v-14h14v4h-10v10zm16 6h-14v-14h14v14z" })
 ], -1 /* HOISTED */));
-const _hoisted_4 = [
-  _hoisted_3
+const _hoisted_3 = [
+  _hoisted_2
 ];
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (openBlock(), createElementBlock("div", _hoisted_1, [
-    createElementVNode("button", {
-      "data-clipboard-text": $props.text,
-      class: "btn copy-clipboard",
-      style: normalizeStyle(_ctx.styleOptions),
-      onClick: _cache[0] || (_cache[0] = $event => ($options.showCopyAlert($event)))
-    }, _hoisted_4, 12 /* STYLE, PROPS */, _hoisted_2)
-  ]))
+  return (openBlock(), createElementBlock("button", {
+    "data-clipboard-text": $props.text,
+    class: "btn copy-clipboard",
+    style: normalizeStyle(_ctx.styleOptions),
+    onClick: _cache[0] || (_cache[0] = $event => ($options.showCopyAlert($event)))
+  }, _hoisted_3, 12 /* STYLE, PROPS */, _hoisted_1))
 }
 
 function styleInject(css, ref) {
