@@ -28,7 +28,7 @@ export default {
     },
   },
   mounted() {
-    this.styleOptions = Object.assign(this.options)
+    this.styleOptions = this.options || {}
   },
 }
 </script>
