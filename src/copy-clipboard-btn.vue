@@ -26,19 +26,18 @@ export default {
         div.removeAttribute('data-copy-text');
       }, 2000);
     },
-    mounted() {
-      this.styleOptions = Object.assign({
-        background: '#fff',
-        borderColor: '#000',
-        fill: '#000',
-      }, this.options)
-    },
+  },
+  mounted() {
+    this.styleOptions = Object.assign(this.options)
   },
 }
 </script>
 
 <style scoped>
 .copy-clipboard {
+  background: white;
+  border-color: #fff;
+  fill: #fff;
   line-height: 0;
   padding: .5rem;
 

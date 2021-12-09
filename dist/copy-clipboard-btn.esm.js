@@ -19,13 +19,9 @@ var script = {
         div.removeAttribute('data-copy-text');
       }, 2000);
     },
-    mounted() {
-      this.styleOptions = Object.assign({
-        background: '#fff',
-        borderColor: '#000',
-        fill: '#000',
-      }, this.options);
-    },
+  },
+  mounted() {
+    this.styleOptions = Object.assign(this.options);
   },
 };
 
@@ -79,7 +75,7 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = "\n.copy-clipboard[data-v-6457b266] {\n  line-height: 0;\n  padding: .5rem;\n}\n.copy-clipboard[data-v-6457b266]:hover {\n  fill: black;\n}\n.show-copy-text[data-v-6457b266]::after {\n  content: attr(data-copy-text);\n  margin-left: .5rem;\n}\n";
+var css_248z = "\n.copy-clipboard[data-v-6457b266] {\n  background: white;\n  border-color: #fff;\n  fill: #fff;\n  line-height: 0;\n  padding: .5rem;\n}\n.copy-clipboard[data-v-6457b266]:hover {\n  fill: black;\n}\n.show-copy-text[data-v-6457b266]::after {\n  content: attr(data-copy-text);\n  margin-left: .5rem;\n}\n";
 styleInject(css_248z);
 
 script.render = render;
