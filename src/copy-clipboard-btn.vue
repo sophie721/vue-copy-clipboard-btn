@@ -38,16 +38,14 @@ export default {
 
 <style>
 .copy-clipboard {
-  background: white;
-  border-color: #000;
-  fill: #000;
   line-height: 0;
   padding: .5rem;
-
+  fill: black;
+  fill-opacity: .7;
 }
 
 .copy-clipboard:hover {
-  fill: black;
+  fill-opacity: 1;
 }
 
 .show-copy-text::after {
