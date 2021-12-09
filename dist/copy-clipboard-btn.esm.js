@@ -1,4 +1,4 @@
-import { openBlock, createElementBlock, normalizeStyle, pushScopeId, popScopeId, createElementVNode } from 'vue';
+import { openBlock, createElementBlock, normalizeStyle, createElementVNode } from 'vue';
 
 var script = {
   data: () => ({
@@ -25,16 +25,15 @@ var script = {
   },
 };
 
-const _withScopeId = n => (pushScopeId("data-v-6457b266"),n=n(),popScopeId(),n);
 const _hoisted_1 = ["data-clipboard-text"];
-const _hoisted_2 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/createElementVNode("svg", {
+const _hoisted_2 = /*#__PURE__*/createElementVNode("svg", {
   height: "15",
   viewBox: "0 0 24 24",
   width: "15",
   xmlns: "http://www.w3.org/2000/svg"
 }, [
   /*#__PURE__*/createElementVNode("path", { d: "M18 6v-6h-18v18h6v6h18v-18h-6zm-12 10h-4v-14h14v4h-10v10zm16 6h-14v-14h14v14z" })
-], -1 /* HOISTED */));
+], -1 /* HOISTED */);
 const _hoisted_3 = [
   _hoisted_2
 ];
@@ -75,11 +74,10 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = "\n.copy-clipboard[data-v-6457b266] {\n  background: white;\n  border-color: #fff;\n  fill: #fff;\n  line-height: 0;\n  padding: .5rem;\n}\n.copy-clipboard[data-v-6457b266]:hover {\n  fill: black;\n}\n.show-copy-text[data-v-6457b266]::after {\n  content: attr(data-copy-text);\n  margin-left: .5rem;\n}\n";
+var css_248z = "\n.copy-clipboard {\n  background: white;\n  border-color: #fff;\n  fill: #fff;\n  line-height: 0;\n  padding: .5rem;\n}\n.copy-clipboard:hover {\n  fill: black;\n}\n.copy-clipboard.show-copy-text::after {\n  content: attr(data-copy-text);\n  margin-left: .5rem;\n}\n";
 styleInject(css_248z);
 
 script.render = render;
-script.__scopeId = "data-v-6457b266";
 script.__file = "src/copy-clipboard-btn.vue";
 
 function install(Vue) {

@@ -33,7 +33,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .copy-clipboard {
   background: white;
   border-color: #fff;
@@ -47,7 +47,7 @@ export default {
   fill: black;
 }
 
-.show-copy-text::after {
+.copy-clipboard.show-copy-text::after {
   content: attr(data-copy-text);
   margin-left: .5rem;
 }
