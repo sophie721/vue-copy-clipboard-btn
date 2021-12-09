@@ -1,5 +1,6 @@
 import postcss from 'rollup-plugin-postcss';
-import vue from 'rollup-plugin-vue';
+import vue from 'rollup-plugin-vue2';
+import {terser} from 'rollup-plugin-terser';
 
 export default {
     input: 'src/wrapper.js',
@@ -10,6 +11,7 @@ export default {
     },
     plugins: [
         vue(),
-        postcss()
+        postcss(),
+        terser()
     ]
 }
