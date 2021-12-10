@@ -7,11 +7,12 @@ export default {
     output: {
         name: 'CopyClipboardBtn',
         exports: 'named',
-        globals: {vue: 'Vue'}
+        globals: {vue: 'Vue', clipboard: 'ClipboardJS'}
     },
     plugins: [
         vue(),
         postcss(),
         terser()
-    ]
+    ],
+    external: ['clipboard']
 }
