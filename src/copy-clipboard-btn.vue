@@ -57,7 +57,7 @@ export default {
   fill-opacity: .7;
 }
 
-.copy-clipboard:hover {
+.copy-clipboard:not(:disabled):hover {
   fill-opacity: 1;
 }
 
@@ -66,6 +66,7 @@ export default {
   position: absolute;
   top: 100%;
   right: 50%;
+  transform: translateX(50%);
   margin-top: 6px;
   z-index: 1000000;
   display: none;
@@ -81,7 +82,6 @@ export default {
   pointer-events: none;
   background: var(--tooltip-bg-color, white);
   border-radius: 6px;
-  opacity: 0
 }
 
 .copy-clipboard.tooltipped:hover::after {
