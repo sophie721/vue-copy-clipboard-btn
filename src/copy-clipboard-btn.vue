@@ -20,6 +20,9 @@ export default {
       }, this.options)
     },
   },
+  data: () => ({
+    clipboard: null,
+  }),
   props: {
     copyAlertText: String,
     copyAlertTarget: String,
@@ -37,10 +40,15 @@ export default {
       }, 2000);
     },
   },
-  watch: {
-    text() {
-      new ClipboardJS('.copy-clipboard')
-    },
+  mounted() {
+    this.clipboard = new ClipboardJS('.copy-clipboard', {
+      text: function (trigger) {
+        return trigger.getAttribute('data-clipboard-text')
+      }
+    })
+  },
+  destroyed() {
+    this.clipboard.destroy()
   },
 }
 </script>
