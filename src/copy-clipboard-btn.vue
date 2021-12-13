@@ -68,7 +68,8 @@ export default {
   transform: translateX(50%);
   z-index: 1000001;
   display: none;
-  border: 6px solid var(--tooltip-bg-color);
+  border: 6px solid transparent;
+  border-bottom-color: var(--tooltip-bg-color);
 }
 
 .copy-clipboard.tooltipped:hover::before {
@@ -88,7 +89,7 @@ export default {
   margin-top: 6px;
   z-index: 1000000;
   display: none;
-  padding: .5em .75em;
+  padding: 1.2em .7em;
   font-size: 80%;
   color: var(--tooltip-color, black);
   text-align: center;
